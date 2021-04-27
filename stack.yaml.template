@@ -12,8 +12,8 @@ extra-deps:
       - libtorch-ffi-helper
 
 extra-include-dirs:
-  - $HOME/.libtorch/include/torch/csrc/api/include
-  - $HOME/.libtorch/include
+  - $LIBTORCH_PATH/torch/csrc/api/include
+  - $LIBTORCH_PATH/include
 
 extra-lib-dirs:
-  - $HOME/.libtorch/lib
+  - $LIBTORCH_PATH/lib
