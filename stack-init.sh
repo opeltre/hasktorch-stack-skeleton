@@ -1,6 +1,13 @@
 # replace with upstream url
 repo="https://raw.githubusercontent.com/opeltre/hasktorch-stack-skeleton/libtorch-path"
 
+echo ""
+echo "Creating minimal stack configuration for hasktorch"
+echo "This assumes you have a libtorch copy at LIBTORCH_PATH"
+echo "See the project repository or the stack documentation for more info"
+echo ""
+
+
 # check for LIBTORCH_PATH: 
 [[ -n $1 ]] && libtorch=$1 || libtorch=$LIBTORCH_PATH
 
@@ -29,3 +36,5 @@ sub1="s@\$LIBTORCH_PATH@${libtorch}@g"
 
 curl -L $repo/stack.yaml.template | sed $sub1 > stack.yaml
 curl -L $repo/package.yaml > package.yaml
+
+echo ""
